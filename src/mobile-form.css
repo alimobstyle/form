@@ -1,0 +1,98 @@
+/*
+ * alistyle.mobile-form 模块
+ * @author ermin.zem
+ * @create 2014-1-3
+ * @version 1.0.1
+ */
+.ali-mobile-form {
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.ali-mobile-form, .ali-mobile-form * {
+    list-style: none;
+}
+
+.ali-mobile-form fieldset {
+    border: 0;
+    padding: 0;
+}
+
+.ali-mobile-form legend {
+    display: none;
+}
+
+.ali-mobile-form-item:after {
+    clear: both;
+    content: '';
+    display: block;
+    height: 0;
+    visibility: hidden;
+}
+
+.ali-mobile-form-item {
+    padding: 0;
+    overflow: hidden;
+    zoom: 1;
+    margin-top: 20px;
+}
+
+.ali-mobile-form-item select {
+    vertical-align: middle;
+    margin: 4px 0 0;
+}
+
+.ali-mobile-form-item input {
+    vertical-align: middle;
+    *vertical-align: -5px;
+    -webkit-border-radius: 2px;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -webkit-appearance: none;
+    -webkit-box-sizing: border-box;
+}
+.ali-mobile-form-item .ali-input{
+    width: 100%;
+    background: #fbfbfb;
+    border: 1px solid #c9c9c9;
+    color: #333;
+    border-radius: 2px;
+    text-indent: 3px;
+    height: 40px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.ali-mobile-form-item .ali-input:hover, .ali-mobile-form-item .ali-input:active, .ali-mobile-form-item .ali-input:focus{
+    border: 1px solid #3ac6e3;
+}
+
+.ali-mobile-form-explain {
+    margin: 0;
+    padding: 8px 0 0;
+    font-size: 12px;
+    color: #4d4d4d;
+}
+.ali-mobile-form-explain .iconfont{
+    color: #ff7f00;
+}
+
+
+/*input*/
+.ali-textarea {
+    line-height: 15px;
+    border: 1px #9C9C9C solid;
+    padding: 1px 3px 0 4px;
+    overflow: auto;
+    font-family: Arial;
+    font-size: 12px;
+}
+
+.ali-input[disabled],
+.ali-textarea[disabled] {
+    border: none;
+    background: #dcdcdc;
+}
+.ali-input:disabled,
+.ali-textarea:disabled {
+    border: none;
+    background: #dcdcdc;
+}

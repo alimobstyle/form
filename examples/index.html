@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+    <link type="text/css" rel="stylesheet" media="screen" href="../../base/src/base.css">
+    <link type="text/css" rel="stylesheet" media="screen" href="../../sea-modules/alice/one/1.2.2/one.css">
+	<link type="text/css" rel="stylesheet" media="screen" href="../src/form.css">
+    <link type="text/css" rel="stylesheet" media="screen" href="../../tiptext/src/tiptext.css">
+	<title>Alistyle Form</title>
+</head>
+<body>
+	<form class="ali-form" name="form" method="post">
+        <fieldset>
+            <legend>表单标题</legend>
+            <div class="ali-form-item">
+                <label for="" class="ali-label">当前密码<span class="ali-form-required">*</span>：</label>
+                <input type="text" class="ali-input "/>
+                <div class="ali-tiptext-container ali-tiptext-container-message">
+                    <div class="ali-tiptext-arrow ali-tiptext-arrowleft">
+                        <em>◆</em>
+                        <span>◆</span>
+                    </div>
+                    <p class="ali-tiptext ali-tiptext-message">
+                        <i class="ali-tiptext-icon iconfont" title="提示">&#xF046;</i>
+                        提示 - message
+                    </p>
+                </div>
+            </div>
+            <div class="ali-form-item ali-form-item-error">
+                <label for="" class="ali-label">新密码<span class="ali-form-required">*</span>：</label>
+                <input type="text" class="ali-input "/>
+                <div class="ali-tiptext-container ali-tiptext-container-error">
+                    <div class="ali-tiptext-arrow ali-tiptext-arrowleft">
+                        <em>◆</em>
+                        <span>◆</span>
+                    </div>
+                    <p class="ali-tiptext ali-tiptext-error">
+                        <i class="ali-tiptext-icon iconfont" title="错误">&#xF045;</i>
+                        错误 - error
+                    </p>
+                </div>
+            </div>
+            <div class="ali-form-item ali-form-item-success">
+                <label for="" class="ali-label">确认新密码<span class="ali-form-required">*</span>：</label>
+                <input type="text" class="ali-input "/>
+                <div class="ali-tiptext-container ali-tiptext-container-success">
+                    <div class="ali-tiptext-arrow ali-tiptext-arrowleft">
+                        <em>◆</em>
+                        <span>◆</span>
+                    </div>
+                    <p class="ali-tiptext ali-tiptext-success">
+                        <i class="ali-tiptext-icon iconfont" title="成功">&#xF049;</i>
+                        成功 - success
+                    </p>
+                </div>
+            </div>
+            <div class="ali-form-item">
+                <input type="submit" class="ui-button ui-button-lorange" value="确定">
+            </div>
+        </fieldset>
+	</form>
+</body>
+</html>
