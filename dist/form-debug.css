@@ -1,3 +1,4 @@
+/*! define alimobstyle/form/1.0.1/form-debug.css */
 /*
  * alistyle.mobile-form 模块
  * @author ermin.zem
@@ -75,20 +76,14 @@
     color: #ff7f00;
 }
 
-
-/*textarea*/
-.ali-textarea{
-    width: 100%;
-    -webkit-box-sizing: border-box;
-    padding: 12px 9px;
-    border: none;
-    outline: none;
-    font-size: 14px;
-    height: 80px;
-}
-.ali-textarea:active, .ali-textarea:focus{
-    border: none;
-    outline: none;
+/*input*/
+.ali-textarea {
+    line-height: 15px;
+    border: 1px #9C9C9C solid;
+    padding: 1px 3px 0 4px;
+    overflow: auto;
+    font-family: Arial;
+    font-size: 12px;
 }
 
 .ali-input[disabled],
@@ -100,54 +95,4 @@
 .ali-textarea:disabled {
     border: none;
     background: #dcdcdc;
-}
-
-
-
-/*ali-select-cont*/
-.ali-select-cont{
-    margin: 0 10px;
-    -webkit-box-sizing: border-box;
-    position: relative;
-    height: 43px;
-    line-height: 43px;
-    border-bottom: 1px solid #c9c9c9;
-}
-.ali-select-cont h3{
-    font-size: 14px;
-    font-weight: 100;
-    margin: 0;
-}
-.ali-select-cont h3 span{
-    color: #ffa45b;
-    margin-left: 5px;
-}
-.ali-select-cont .arrow{
-    position: absolute;
-    right: 0;
-    top: 0;
-    color: #adadad;
-}
-.ali-select-cont .ali-tiptext-container{
-    position: absolute;
-    right: 0;
-    top: 42px;
-    z-index: 99999;
-    padding: 8px 0;
-    background: #fff;
-}
-.ali-select-cont .ali-tiptext-container .ali-tiptext-arrow span{
-    color: #fff;
-}
-.ali-select-cont .ali-tiptext-container ul{
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-.ali-select-cont .ali-tiptext-container ul li{
-    line-height: 40px;
-    padding: 0 25px;
-}
-.ali-select-cont .ali-tiptext-container ul li.active{
-    background: #ffe4ba;
 }
