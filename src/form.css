@@ -4,150 +4,431 @@
  * @create 2014-1-3
  * @version 1.0.1
  */
-.ali-mobile-form {
+.ali-form {
     font-size: 14px;
     line-height: 1.5;
 }
 
-.ali-mobile-form, .ali-mobile-form * {
+.ali-form, .ali-form * {
     list-style: none;
 }
 
-.ali-mobile-form fieldset {
+.ali-form fieldset {
     border: 0;
     padding: 0;
 }
 
-.ali-mobile-form legend {
+.ali-form legend {
     display: none;
 }
 
-.ali-mobile-form-item:after {
-    clear: both;
-    content: '';
+.ali-field {
+    margin: 0 0 15px 0;
+    box-sizing: border-box;
+}
+
+.ali-field:after {
+    content: "\0020";
     display: block;
     height: 0;
-    visibility: hidden;
+    clear: both;
 }
 
-.ali-mobile-form-item {
-    padding: 0;
-    overflow: hidden;
-    zoom: 1;
-    margin-top: 20px;
+.ali-field label{
+    display: block;
 }
 
-.ali-mobile-form-item select {
-    vertical-align: middle;
-    margin: 4px 0 0;
+.ali-field-default-message,
+.ali-field-message {
+    float: left;
+    font-size: .875em;
 }
-
-.ali-mobile-form-item input {
-    vertical-align: middle;
-    *vertical-align: -5px;
-    -webkit-border-radius: 2px;
-    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-    -webkit-appearance: none;
-    -webkit-box-sizing: border-box;
+.ali-field-error .ali-field-default-message,
+.ali-field-warn .ali-field-default-message {
+    display: none;
 }
-.ali-mobile-form-item .ali-input{
-    width: 100%;
-    background: #fbfbfb;
-    border: 1px solid #c9c9c9;
-    color: #333;
-    border-radius: 2px;
-    text-indent: 3px;
-    height: 40px;
-    padding-top: 10px;
-    padding-bottom: 10px;
+.ali-field-message,
+.ali-field-message:after {
+    display: none;
 }
-.ali-mobile-form-item .ali-input:hover, .ali-mobile-form-item .ali-input:active, .ali-mobile-form-item .ali-input:focus{
-    border: 1px solid #3ac6e3;
-}
-
-.ali-mobile-form-explain {
-    margin: 0;
-    padding: 8px 0 0;
-    font-size: 12px;
-    color: #4d4d4d;
-}
-.ali-mobile-form-explain .iconfont{
-    color: #ff7f00;
-}
-
-
-/*textarea*/
-.ali-textarea{
-    width: 100%;
-    -webkit-box-sizing: border-box;
-    padding: 12px 9px;
-    border: none;
-    outline: none;
-    font-size: 14px;
-    height: 80px;
-}
-.ali-textarea:active, .ali-textarea:focus{
-    border: none;
-    outline: none;
-}
-
-.ali-input[disabled],
-.ali-textarea[disabled] {
-    border: none;
-    background: #dcdcdc;
-}
-.ali-input:disabled,
-.ali-textarea:disabled {
-    border: none;
-    background: #dcdcdc;
-}
-
-
-
-/*ali-select-cont*/
-.ali-select-cont{
-    margin: 0 10px;
-    -webkit-box-sizing: border-box;
+.ali-field-warn .ali-field-message,
+.ali-field-error .ali-field-message {
+    float: right;
     position: relative;
-    height: 43px;
-    line-height: 43px;
-    border-bottom: 1px solid #c9c9c9;
-}
-.ali-select-cont h3{
-    font-size: 14px;
-    font-weight: 100;
-    margin: 0;
-}
-.ali-select-cont h3 span{
-    color: #ffa45b;
-    margin-left: 5px;
-}
-.ali-select-cont .arrow{
-    position: absolute;
-    right: 0;
-    top: 0;
-    color: #adadad;
-}
-.ali-select-cont .ali-tiptext-container{
-    position: absolute;
-    right: 0;
-    top: 42px;
-    z-index: 99999;
-    padding: 8px 0;
-    background: #fff;
-}
-.ali-select-cont .ali-tiptext-container .ali-tiptext-arrow span{
+    margin-top: 3px;
+    padding: 2px 5px 1px;
     color: #fff;
+    font-size: .875em;
+    border-radius: 2px;
+    -webkit-border-radius: 2px;
+    -ms-border-radius: 2px;
 }
-.ali-select-cont .ali-tiptext-container ul{
-    list-style: none;
-    margin: 0;
-    padding: 0;
+/* arrow */
+.ali-field-warn .ali-field-message:after,
+.ali-field-error .ali-field-message:after {
+    content: "";
+    position: absolute;
+    z-index: 1;
+    width: 4px;
+    height: 4px;
+    top: -2px;
+    right: 19px;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
 }
-.ali-select-cont .ali-tiptext-container ul li{
-    line-height: 40px;
-    padding: 0 25px;
+.ali-field-warn .ali-field-message,
+.ali-field-warn .ali-field-message:after {
+    background-color: #ff8634;
 }
-.ali-select-cont .ali-tiptext-container ul li.active{
-    background: #ffe4ba;
+.ali-field-error .ali-field-message,
+.ali-field-error .ali-field-message:after {
+    background-color: #ff3a0c;
+}
+.ali-field-warn .ali-field-message,
+.ali-field-error .ali-field-message,
+.ali-field-warn .ali-field-message:after,
+.ali-field-error .ali-field-message:after {
+    display: block;
+}
+.ali-field-warn .ali-field-input input,
+.ali-field-warn .ali-select,
+.ali-field-warn .ali-checkbox {
+    border-color: #ff8634;
+}
+.ali-field-error .ali-field-input input,
+.ali-field-error .ali-select,
+.ali-field-error .ali-checkbox {
+    border-color: #ff3a0c;
+}
+.ali-field-error .ali-field-item-reset input {
+    border-color: #bfbfbf;
+}
+.ali-field-pack .ali-field-message:after {
+    display: none;
+}
+
+
+
+
+
+
+
+.ali-field-input {
+    position: relative;
+    overflow-x: hidden;
+    /*防止在IOS Safari下 旋转屏幕导致出现横向滚动条*/
+}
+.ali-field-input label,
+.ali-field-input input {
+    padding: 9px 32px 8px 8px;
+    width: 100%;
+    height: 44px;
+    line-height: 1.2;
+    border: 1px solid #bfbfbf;
+    background-color: #fff;
+    border-radius: 2px;
+    -webkit-border-radius: 2px;
+    -ms-border-radius: 2px;
+}
+.ali-field-input label {
+    color: #333;
+}
+.ali-field-input input {
+    box-shadow: inset 0px 1px 2px rgba(0, 0, 0, 0.3);
+    -webkit-box-shadow: inset 0px 1px 2px rgba(0, 0, 0, 0.3);
+    -ms-box-shadow: inset 0px 1px 2px rgba(0, 0, 0, 0.3);
+}
+.ali-field-input input:active,
+.ali-field-input input:hover {
+    border-color: #3ac6e3;
+}
+.ali-field-disabled .ali-field-input input:active,
+.ali-field-disabled .ali-field-input input:hover {
+    border-color: #d9d9d9;
+}
+.ali-field-disabled label,
+.ali-field-disabled input {
+    color: #c7c7c7;
+    border-color: #d9d9d9;
+}
+.ali-field-input:before,
+.ali-field-input:after {
+    display: none;
+    position: absolute;
+    width: 26px;
+    height: 26px;
+    content: "\0020";
+}
+.ali-field-input:before {
+    top: 9px;
+    right: 8px;
+    z-index: 1;
+    border-radius: 13px;
+    -webkit-border-radius: 13px;
+    -ms-border-radius: 13px;
+}
+.ali-field-input:after {
+    top: 9px;
+    right: 8px;
+    z-index: 999;
+    background-repeat: no-repeat;
+}
+.ali-sd .ali-field-input:after,
+.ali-hd .ali-field-input:after {
+    background-image: url(https://i.alipayobjects.com/e/201306/Ss1aIdyvt.png);
+    background-size: 106px auto;
+}
+.ali-field-success .ali-field-input:before,
+.ali-field-success .ali-field-input:after,
+.ali-field-error .ali-field-input:before,
+.ali-field-error .ali-field-input:after,
+.ali-field-warn .ali-field-input:before,
+.ali-field-warn .ali-field-input:after {
+    display: block;
+}
+.ali-field-success .ali-field-input:before {
+    background-color: #3bb000;
+}
+.ali-field-success .ali-field-input:after {
+    background-position: 0 -26px;
+}
+.ali-field-error .ali-field-input:before {
+    background-color: #ff3a0c;
+}
+.ali-field-error .ali-field-input:after {
+    background-position: 0 0;
+}
+.ali-field-warn .ali-field-input:before {
+    background-color: #ff8634;
+}
+.ali-field-warn .ali-field-input:after {
+    background-position: 0 -52px;
+}
+.ali-field-error .ali-field-item-reset .ali-field-input:before,
+.ali-field-error .ali-field-item-reset .ali-field-input:after {
+    display: none;
+}
+.ali-field-loading .ali-field-input:before {
+    display: block;
+    background: url('data:image/gif;base64,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') no-repeat 50% 50%;
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
+    .ali-hd .ali-field-input:after {
+        background-image: url(https://i.alipayobjects.com/e/201306/Ss1WYBVZV.png);
+        background-size: 106px auto;
+    }
+}
+.ali-checkbox {
+    display: block;
+    position: relative;
+    padding: 0 48px 0 8px;
+    height: 44px;
+    color: #333;
+    line-height: 42px;
+    border: 1px solid #bfbfbf;
+    background-color: #fff;
+    border-radius: 6px;
+    -webkit-border-radius: 6px;
+    -ms-border-radius: 6px;
+}
+.ali-checkbox-disabled {
+    color: #c7c7c7;
+    border-color: #d9d9d9;
+}
+.ali-checkbox-naked {
+    height: 32px;
+    padding: 0 30px 0px 0;
+    line-height: 32px;
+    color: #808080;
+    border: 0;
+    background-color: transparent;
+}
+.ali-checkbox-mini {
+    height: 24px;
+    padding: 0 0 0 21px;
+    line-height: 24px;
+    font-size: .9em;
+    color: #808080;
+    border: 0;
+    background-color: transparent;
+}
+.ali-checkbox-simple {
+    height: 24px;
+    padding: 0 0 0 30px;
+    line-height: 24px;
+    border: 0;
+    background-color: transparent;
+}
+.ali-checkbox .icon-check {
+    position: absolute;
+    top: 5px;
+    right: 8px;
+    z-index: 1;
+    width: 32px;
+    height: 32px;
+    border: 2px solid #b2b2b2;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -ms-border-radius: 4px;
+}
+.ali-checkbox .icon-check:after {
+    position: absolute;
+    top: 3px;
+    right: 8px;
+    z-index: 999;
+    width: 10px;
+    height: 17px;
+    border: solid 4px #b2b2b2;
+    border-width: 0 4px 4px 0;
+    content: "\0020";
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+.ali-checkbox-naked .icon-check {
+    top: 0;
+    right: 9px;
+}
+.ali-checkbox-mini .icon-check {
+    top: 4px;
+    left: 0;
+    width: 16px;
+    height: 16px;
+    border-width: 2px;
+    border-radius: 2px;
+    -webkit-border-radius: 2px;
+    -ms-border-radius: 2px;
+}
+.ali-checkbox-mini .icon-check:after {
+    top: 0px;
+    right: 3px;
+    width: 7px;
+    height: 10px;
+    border-width: 0 2px 2px 0;
+}
+.ali-checkbox-simple .icon-check {
+    top: 0;
+    left: 0;
+    width: 22px;
+    height: 22px;
+    border-width: 2px;
+    border-radius: 2px;
+    -webkit-border-radius: 2px;
+    -ms-border-radius: 2px;
+}
+.ali-checkbox-simple .icon-check:after {
+    top: 0px;
+    right: 5px;
+    width: 9px;
+    height: 15px;
+    border-width: 0 3px 3px 0;
+}
+.ali-checkbox-disabled .icon-check,
+.ali-checkbox-disabled .icon-check:after {
+    border-color: #e6e6e6;
+}
+.ali-checkbox label {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+.ali-checkbox input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+}
+.ali-checkbox-simple a {
+    color: #333;
+    text-decoration: underline;
+}
+.ali-checkbox input:checked + .icon-check {
+    border-color: #3bb000;
+    background-color: #3bb000;
+}
+.ali-checkbox input:checked + .icon-check:after {
+    border-color: #fff;
+}
+.ali-checkbox-mini input:checked + .icon-check,
+.ali-checkbox-mini input:checked + .icon-check:after,
+.ali-checkbox-simple input:checked + .icon-check,
+.ali-checkbox-simple input:checked + .icon-check:after {
+    border-color: #3bb000;
+    background: none;
+}
+.ali-select {
+    position: relative;
+    padding: 0 8px;
+    height: 44px;
+    line-height: 42px;
+    border: 1px solid #bfbfbf;
+    background-color: #fff;
+    border-radius: 2px;
+    -webkit-border-radius: 2px;
+    -ms-border-radius: 2px;
+    overflow: hidden;
+    color: #333;
+}
+.ali-select select {
+    cursor: pointer;
+    width: 120%;
+    height: 100%;
+    border: none;
+    appearance: none;
+    -webkit-appearance: none;
+}
+.ali-select:before,
+.ali-select:after {
+    position: absolute;
+    content: "\0020";
+}
+.ali-select:before {
+    width: 42px;
+    height: 42px;
+    top: 0;
+    right: 0;
+    border-radius: 2px;
+    -webkit-border-radius: 2px;
+    -ms-border-radius: 2px;
+    background-color: #fff;
+}
+.ali-select:after {
+    width: 16px;
+    height: 16px;
+    top: 10px;
+    right: 15px;
+    border-bottom: solid 4px #a6a6a6;
+    border-right: solid 4px #a6a6a6;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+    background: none;
+}
+.ali-select-disabled {
+    color: #c7c7c7;
+}
+.ali-select-disabled:after {
+    opacity: .7;
+}
+/* .ali-select-custom 需要js支持change行为 */
+.ali-select-custom select {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    opacity: 0;
+}
+.ali-select-custom.ali-select-disabled select {
+    display: none;
+}
+.ali-select .ali-select-text em {
+    color: #f60;
+    margin-left: 4px;
+}
+.ali-select-disabled .ali-select-text em {
+    color: #fcc;
 }

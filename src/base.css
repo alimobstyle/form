@@ -1,0 +1,269 @@
+/* alimobstyle.base 样式模块 */
+/*
+ * alipay iconfont
+ */
+@font-face{
+    font-family:rei;
+    src:url(https://i.alipayobjects.com/common/fonts/rei.eot);
+    src:url(https://i.alipayobjects.com/common/fonts/rei.eot?#iefix) format("embedded-opentype"),
+    url(https://i.alipayobjects.com/common/fonts/rei.woff) format("woff"),
+    url(https://i.alipayobjects.com/common/fonts/rei.ttf) format("truetype"),
+    url(https://i.alipayobjects.com/common/fonts/rei.svg#rei) format("svg");
+    font-weight:400;
+    font-style:normal;
+}
+.iconfont{
+    font-family:rei;
+    font-style:normal;
+    cursor:default;
+    -webkit-font-smoothing:antialiased;
+}
+
+
+/* bufix for IE10 */
+@media (max-device-width: 480px) and (orientation: portrait) {
+    @-ms-viewport {
+        width: 320px;
+    }
+}
+*,
+*:before,
+*:after {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-text-size-adjust: none;
+    /*使Chrome使用小于12px的字体，但是双指放大网页，字体不会对应放大*/
+
+    -ms-text-size-adjust: none;
+    text-size-adjust: none;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+code,
+form,
+fieldset,
+legend,
+input,
+textarea,
+p,
+blockquote,
+th,
+td {
+    margin: 0;
+    padding: 0;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+fieldset,
+img {
+    border: 0;
+}
+address,
+caption,
+cite,
+code,
+dfn,
+em,
+strong,
+th,
+var {
+    font-style: normal;
+    font-weight: normal;
+}
+li {
+    list-style: none;
+}
+caption,
+th {
+    text-align: left;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-size: 100%;
+    font-weight: normal;
+}
+q:before,
+q:after {
+    content: "";
+}
+abbr,
+acronym {
+    border: 0;
+    font-variant: normal;
+}
+sup {
+    vertical-align: text-top;
+}
+sub {
+    vertical-align: text-bottom;
+}
+input,
+textarea,
+select {
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+}
+input:password {
+    ime-mode: disabled;
+}
+*:focus {
+    outline: none;
+}
+body,
+input,
+textarea,
+select,
+button {
+    font-size: 16px;
+    line-height: 1.5;
+    color: #333;
+}
+html,
+body {
+    height: 100%;
+    -webkit-touch-callout: none;
+}
+.ali-content {
+    min-height: 200px;
+}
+.ali-page {
+    background-color: #f2f2f2;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+input {
+    line-height: 1;
+}
+a,
+a:visited {
+    color: #2277bb;
+    text-decoration: none;
+}
+form {
+    padding: 5px;
+    color: #808080;
+}
+h2 {
+    color: #333;
+}
+h3 {
+    color: #808080;
+}
+.center {
+    text-align: center;
+}
+.text-right {
+    text-align: right;
+}
+.larger {
+    font-size: 1.125em;
+}
+.smaller {
+    font-size: .875em;
+}
+.black {
+    color: #333;
+}
+.gray {
+    color: #808080;
+}
+.orange {
+    color: #f60;
+}
+.ime-disabled {
+    ime-mode: disabled;
+}
+.fn-clear:after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;
+}
+body .fn-hide {
+    display: none;
+}
+.fn-left,
+.fn-right {
+    display: inline;
+}
+.fn-left {
+    float: left;
+}
+.fn-right {
+    float: right;
+}
+.ali-fixed {
+    position: fixed;
+}
+.ali-fixed-bottom {
+    left: 5px;
+    right: 5px;
+    bottom: 0;
+}
+/*icons*/
+.ali-icon {
+    display: block;
+}
+.icon-arrow,
+.icon-arrow-horizontal {
+    background: none;
+    width: 16px;
+    height: 16px;
+    border-bottom: solid 4px #a6a6a6;
+    border-right: solid 4px #a6a6a6;
+}
+/* onload 之后根据网速，将在 body 加上ali-sd, ali-hd，需要在onload之后加载的图片请定义在.ali-sd 或 ali-hd之后
+.ali-sd{}
+.ali-hd{}
+*/
+.ali-flexbox {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: box;
+}
+.ali-flexbox .ali-flexbox-item {
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    box-flex: 1;
+    margin: 4px 0 4px 8px;
+}
+.ali-flexbox-item:first-child {
+    margin-left: 0;
+}
+
+
+/*
+ * 页面默认基本样式
+ */
+body {
+    color: #333;
+    background: #f2f2f2;
+    font-family: Georgia, 'Xin Gothic', 'PT Sans', 'Hiragino Sans GB', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}

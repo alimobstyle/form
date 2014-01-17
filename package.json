@@ -2,7 +2,7 @@
   "family":      "alimobstyle",
   "name":        "form",
   "version":     "1.0.1",
-  "description": "alibaba mobile css theme - form",
+  "description": "alibaba mobile css theme - 表单",
   "homepage":    "https://github.com/alimobstyle/form.git",
   "author":      "ermin.zem",
   "repository":  {
@@ -16,7 +16,9 @@
   "licenses": "MIT",
   "spm": {
     "output":   ["form.css"],
-    "alias":    {},
+    "alias":    {
+        "base": "alimobstyle/base/1.0.0/base.css"
+    },
     "devAlias": {},
     "engines":  {}
   },
