@@ -1,4 +1,4 @@
-# Modal
+# Form
 
 ---
 
@@ -247,6 +247,26 @@
             <option value="">下拉列表1</option>
             <option value="">下拉列表2</option>
         </select>
+    </div>
+    <div class="ali-field-message">error message</div>
+</div>
+````
+
+### Textarea
+````html
+<div class="ali-field">
+    <div class="ali-textarea">
+        <textarea name="" placeholder="请输入评论内容"></textarea>
+    </div>
+    <div class="ali-field-message">error message</div>
+</div>
+````
+
+### Textarea - 出错
+````html
+<div class="ali-field ali-field-error">
+    <div class="ali-textarea">
+        <textarea name="" placeholder="请输入评论内容"></textarea>
     </div>
     <div class="ali-field-message">error message</div>
 </div>
