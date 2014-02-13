@@ -365,6 +365,67 @@
 }
 
 
+.ali-select select{
+    display: none;
+}
+.ali-select-cont{
+    position: relative;
+    padding: 0 8px;
+    width: 100%;
+    height: 42px;
+    line-height: 40px;
+    border: 1px solid #c9c9c9;
+    background-color: #fbfbfb;
+}
+.ali-select-cont:after{
+    position: absolute;
+    content: "\0020";
+    width: 16px;
+    height: 16px;
+    top: 10px;
+    right: 15px;
+    border-bottom: solid 4px #a6a6a6;
+    border-right: solid 4px #a6a6a6;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+.ali-select-main{
+    position: absolute;
+    right: 0;
+    top: 48px;
+    z-index: 99999;
+    padding: 8px 0;
+    background: #fff;
+    border: 1px solid #e0e0e0;
+}
+.ali-select-main .ali-select-arrow{
+    position: absolute;
+    top: -6px;
+    left: 50%;
+    margin-left: -6px;
+    width: 12px;
+    height: 12px;
+    border-top: solid 1px #e0e0e0;
+    border-left: solid 1px #e0e0e0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+    background-color: #fff;
+}
+.ali-select-disabled .ali-select-cont h3{
+    color: #c7c7c7;
+}
+.ali-select-main ul li{
+    line-height: 40px;
+    padding: 0 25px;
+}
+.ali-select-main ul li.active{
+    background: #ffe4ba;
+}
+
+
+/*
 .ali-select {
     position: relative;
     padding: 0 8px;
@@ -419,7 +480,9 @@
 .ali-select-disabled:after {
     opacity: .7;
 }
+*/
 /* .ali-select-custom 需要js支持change行为 */
+/*
 .ali-select-custom select {
     position: absolute;
     top: 0;
@@ -437,6 +500,7 @@
 .ali-select-disabled .ali-select-text em {
     color: #fcc;
 }
+*/
 
 .ali-textarea{
     position: relative;

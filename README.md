@@ -187,23 +187,26 @@
 </div>
 ````
 
-### Select
+### Select(需要配合alimobscript/select使用)
 ````html
 <div class="ali-field">
     <div class="ali-select">
         <select>
-            <option value="">很长很长很长很长很长很长很长很长很长很长很长很长很长下拉列表1</option>
-            <option value="">下拉列表2</option>
+            <option value="1">一天</option>
+            <option value="7">一周</option>
+            <option value="30" class="active">一个月</option>
         </select>
-    </div>
-</div>
-<div class="ali-field">
-    <div class="ali-select ali-select-custom">
-        <span class="ali-select-text">下拉列表1 <em>优惠</em></span>
-        <select>
-            <option value="">很长很长很长很长很长很长很长很长很长很长很长很长很长下拉列表1</option>
-            <option value="">下拉列表2</option>
-        </select>
+        <div class="ali-select-cont">
+            <h3>操作记录</h3>
+            <div class="ali-select-main">
+                <div class="ali-select-arrow"></div>
+                <ul>
+                    <li data-value="1">一天</li>
+                    <li data-value="7">一周</li>
+                    <li data-value="30" class="active">一个月</li>
+                </ul>
+            </div>
+        </div>
     </div>
 </div>
 ````
@@ -212,19 +215,13 @@
 ````html
 <div class="ali-field">
     <div class="ali-select ali-select-disabled">
-        <select disabled="">
-            <option value="">下拉列表1</option>
+        <select>
+            <option value="">很长很长很长很长很长很长很长很长很长很长很长很长很长下拉列表1</option>
             <option value="">下拉列表2</option>
         </select>
-    </div>
-</div>
-<div class="ali-field">
-    <div class="ali-select ali-select-custom ali-select-disabled">
-        <span class="ali-select-text">下拉列表1 <em>优惠</em></span>
-        <select disabled="">
-            <option value="">下拉列表1</option>
-            <option value="">下拉列表2</option>
-        </select>
+        <div class="ali-select-cont">
+            <h3>操作记录</h3>
+        </div>
     </div>
 </div>
 ````
@@ -234,19 +231,12 @@
 <div class="ali-field ali-field-error">
     <div class="ali-select">
         <select>
-            <option value="">下拉列表1</option>
+            <option value="">很长很长很长很长很长很长很长很长很长很长很长很长很长下拉列表1</option>
             <option value="">下拉列表2</option>
         </select>
-    </div>
-    <div class="ali-field-message">error message</div>
-</div>
-<div class="ali-field ali-field-error">
-    <div class="ali-select ali-select-custom">
-        <span class="ali-select-text">下拉列表1 <em>优惠</em></span>
-        <select>
-            <option value="">下拉列表1</option>
-            <option value="">下拉列表2</option>
-        </select>
+        <div class="ali-select-cont">
+            <h3>操作记录</h3>
+        </div>
     </div>
     <div class="ali-field-message">error message</div>
 </div>

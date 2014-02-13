@@ -28,6 +28,7 @@
     box-sizing: border-box;
 }
 
+/*清除浮动*/
 .ali-field:after {
     content: "\0020";
     display: block;
@@ -39,6 +40,7 @@
     display: block;
 }
 
+/*提示信息*/
 .ali-field-default-message,
 .ali-field-message {
     float: left;
@@ -92,6 +94,8 @@
 .ali-field-error .ali-field-message:after {
     display: block;
 }
+
+/*边框颜色*/
 .ali-field-warn .ali-field-input input,
 .ali-field-warn .ali-select,
 .ali-field-warn .ali-checkbox {
@@ -99,12 +103,15 @@
 }
 .ali-field-error .ali-field-input input,
 .ali-field-error .ali-select,
-.ali-field-error .ali-checkbox {
+.ali-field-error .ali-checkbox,
+.ali-field-error .ali-textarea{
     border-color: #ff3a0c;
 }
 .ali-field-error .ali-field-item-reset input {
     border-color: #bfbfbf;
 }
+
+/*组合表单的提示框不显示arrow*/
 .ali-field-pack .ali-field-message:after {
     display: none;
 }
@@ -118,28 +125,20 @@
 .ali-field-input input {
     padding: 9px 32px 8px 8px;
     width: 100%;
-    height: 44px;
+    height: 42px;
     line-height: 1.2;
-    border: 1px solid #bfbfbf;
-    background-color: #fff;
-    border-radius: 2px;
-    -webkit-border-radius: 2px;
-    -ms-border-radius: 2px;
+    border: 1px solid #c9c9c9;
+    background-color: #fbfbfb;
 }
 .ali-field-input label {
     color: #333;
 }
-.ali-field-input input {
-    box-shadow: inset 0px 1px 2px rgba(0, 0, 0, 0.3);
-    -webkit-box-shadow: inset 0px 1px 2px rgba(0, 0, 0, 0.3);
-    -ms-box-shadow: inset 0px 1px 2px rgba(0, 0, 0, 0.3);
-}
-.ali-field-input input:active,
-.ali-field-input input:hover {
+.ali-field-input input:focus,
+.ali-field-input input:active {
     border-color: #3ac6e3;
 }
-.ali-field-disabled .ali-field-input input:active,
-.ali-field-disabled .ali-field-input input:hover {
+.ali-field-disabled .ali-field-input input:focus,
+.ali-field-disabled .ali-field-input input:active {
     border-color: #d9d9d9;
 }
 .ali-field-disabled label,
@@ -169,6 +168,7 @@
     z-index: 999;
     background-repeat: no-repeat;
 }
+.ali-field-input:after,
 .ali-sd .ali-field-input:after,
 .ali-hd .ali-field-input:after {
     background-image: url(https://i.alipayobjects.com/e/201306/Ss1aIdyvt.png);
@@ -209,11 +209,12 @@
     background: url('data:image/gif;base64,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') no-repeat 50% 50%;
 }
 @media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
-    .ali-hd .ali-field-input:after {
+    .ali-field-input:after, .ali-hd .ali-field-input:after {
         background-image: url(https://i.alipayobjects.com/e/201306/Ss1WYBVZV.png);
         background-size: 106px auto;
     }
 }
+
 .ali-checkbox {
     display: block;
     position: relative;
@@ -223,9 +224,9 @@
     line-height: 42px;
     border: 1px solid #bfbfbf;
     background-color: #fff;
-    border-radius: 6px;
-    -webkit-border-radius: 6px;
-    -ms-border-radius: 6px;
+    border-radius: 2px;
+    -webkit-border-radius: 2px;
+    -ms-border-radius: 2px;
 }
 .ali-checkbox-disabled {
     color: #c7c7c7;
@@ -355,6 +356,67 @@
     border-color: #3bb000;
     background: none;
 }
+
+.ali-select select{
+    display: none;
+}
+.ali-select-cont{
+    position: relative;
+    padding: 0 8px;
+    width: 100%;
+    height: 42px;
+    line-height: 40px;
+    border: 1px solid #c9c9c9;
+    background-color: #fbfbfb;
+}
+.ali-select-cont:after{
+    position: absolute;
+    content: "\0020";
+    width: 16px;
+    height: 16px;
+    top: 10px;
+    right: 15px;
+    border-bottom: solid 4px #a6a6a6;
+    border-right: solid 4px #a6a6a6;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+.ali-select-main{
+    position: absolute;
+    right: 0;
+    top: 48px;
+    z-index: 99999;
+    padding: 8px 0;
+    background: #fff;
+    border: 1px solid #e0e0e0;
+}
+.ali-select-main .ali-select-arrow{
+    position: absolute;
+    top: -6px;
+    left: 50%;
+    margin-left: -6px;
+    width: 12px;
+    height: 12px;
+    border-top: solid 1px #e0e0e0;
+    border-left: solid 1px #e0e0e0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+    background-color: #fff;
+}
+.ali-select-disabled .ali-select-cont h3{
+    color: #c7c7c7;
+}
+.ali-select-main ul li{
+    line-height: 40px;
+    padding: 0 25px;
+}
+.ali-select-main ul li.active{
+    background: #ffe4ba;
+}
+
+/*
 .ali-select {
     position: relative;
     padding: 0 8px;
@@ -409,7 +471,9 @@
 .ali-select-disabled:after {
     opacity: .7;
 }
+*/
 /* .ali-select-custom 需要js支持change行为 */
+/*
 .ali-select-custom select {
     position: absolute;
     top: 0;
@@ -426,4 +490,30 @@
 }
 .ali-select-disabled .ali-select-text em {
     color: #fcc;
+}
+*/
+
+.ali-textarea{
+    position: relative;
+    height: 100px;
+    overflow: hidden;
+    background-color: #fff;
+}
+.ali-textarea textarea{
+    width: 100%;
+    height: 100%;
+    color: #333;
+    padding: 8px;
+    border: 1px solid #bfbfbf;
+    border-radius: 2px;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    outline: none;
+    line-height: 24px;
+}
+.ali-textarea textarea:active, .ali-textarea textarea:focus{
+    border-color: #3ac6e3;
 }
