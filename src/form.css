@@ -229,11 +229,8 @@
     height: 44px;
     color: #333;
     line-height: 42px;
-    border: 1px solid #bfbfbf;
-    background-color: #fff;
-    border-radius: 2px;
-    -webkit-border-radius: 2px;
-    -ms-border-radius: 2px;
+    border: 1px solid #d8d8d8;
+    background-color: #fafafa;
 }
 .ali-checkbox-disabled {
     color: #c7c7c7;
@@ -360,7 +357,7 @@
 .ali-checkbox-mini input:checked + .icon-check:after,
 .ali-checkbox-simple input:checked + .icon-check,
 .ali-checkbox-simple input:checked + .icon-check:after {
-    border-color: #3bb000;
+    border-color: #a3d461;
     background: none;
 }
 
