@@ -125,67 +125,111 @@
 ### Checbox-选中
 ````html
 <div class="ali-field">
-  <label class="ali-checkbox">表单项复选框——选中<input type="checkbox" checked="checked"><span class="ali-icon icon-check"></span></label>
+    <label class="ali-checkbox">
+        表单项复选框——选中<input type="checkbox" checked="checked">
+        <span class="ali-icon icon-check"></span>
+    </label>
 </div>
 ````
 
 ### Checbox-未选中
 ````html
 <div class="ali-field">
-  <label class="ali-checkbox">表单项复选框——未选中<input type="checkbox"><span class="ali-icon icon-check"></span></label>
+    <label class="ali-checkbox">
+        表单项复选框——未选中<input type="checkbox">
+        <span class="ali-icon icon-check"></span>
+    </label>
 </div>
 ````
 
 ### Checbox-不可用
 ````html
 <div class="ali-field">
-  <label class="ali-checkbox ali-checkbox-disabled">表单项复选框——不可用<input type="checkbox" disabled="disabled"><span class="ali-icon icon-check"></span></label>
+    <label class="ali-checkbox ali-checkbox-disabled">
+        表单项复选框——不可用<input type="checkbox" disabled="disabled">
+        <span class="ali-icon icon-check"></span>
+    </label>
 </div>
 ````
 
 ### Checbox-警告
 ````html
 <div class="ali-field ali-field-warn">
-  <label class="ali-checkbox"><input type="checkbox">表单项复选框——出错<span class="ali-icon icon-check"></span></label>
-  <div class="ali-field-message">warn message</div>
+    <label class="ali-checkbox">
+        <input type="checkbox">表单项复选框——出错
+        <span class="ali-icon icon-check"></span>
+    </label>
+    <div class="ali-field-message">warn message</div>
 </div>
 ````
 
 ### Checbox-出错
 ````html
 <div class="ali-field ali-field-warn">
-  <label class="ali-checkbox"><input type="checkbox">表单项复选框——出错<span class="ali-icon icon-check"></span></label>
-  <div class="ali-field-message">warn message</div>
+    <label class="ali-checkbox">
+        <input type="checkbox">表单项复选框——出错
+        <span class="ali-icon icon-check"></span>
+    </label>
+    <div class="ali-field-message">warn message</div>
 </div>
 ````
 
 ### Checbox-无框
 ````html
 <div class="ali-field">
-  <label class="ali-checkbox ali-checkbox-naked"><input type="checkbox">表单项复选框——无框<span class="ali-icon icon-check"></span></label>
+    <label class="ali-checkbox ali-checkbox-naked">
+        <input type="checkbox">表单项复选框——无框
+        <span class="ali-icon icon-check"></span>
+    </label>
 </div>
 ````
 
 ### Checkbox-mini
 ````html
 <div class="ali-field">
-  <label class="ali-checkbox ali-checkbox-mini"><input type="checkbox"><span class="ali-icon icon-check"></span>当日累积消费≤200元可免输密码</label>
+    <label class="ali-checkbox ali-checkbox-mini">
+        <input type="checkbox">
+        <span class="ali-icon icon-check"></span>
+        当日累积消费≤200元可免输密码
+    </label>
 </div>
 ````
 
 ### Checkbox-simple
 ````html
 <div class="ali-field">
-  <label class="ali-checkbox ali-checkbox-simple"><input type="checkbox"><span class="ali-icon icon-check"></span>同意《信用支付服务合同》</label>
+    <label class="ali-checkbox ali-checkbox-simple">
+        <input type="checkbox">
+        <span class="ali-icon icon-check"></span>
+        同意《信用支付服务合同》
+    </label>
 </div>
 ````
 
 ### Checkbox-simple
 ````html
 <div class="ali-field">
-  <span class="ali-checkbox ali-checkbox-simple fn-left"><input id="agree" type="checkbox"><span class="ali-icon icon-check"></span></span><label for="agree">同意《信用支付服务合同》<a href="http://www.baidu.com">链接</a></label>
+    <span class="ali-checkbox ali-checkbox-simple fn-left">
+        <input id="agree" type="checkbox">
+        <span class="ali-icon icon-check"></span>
+    </span>
+    <label for="agree">同意《信用支付服务合同》<a href="http://www.baidu.com">链接</a></label>
 </div>
 ````
+
+
+### Checkbox-style
+````html
+<div class="ali-field">
+    <div class="ali-checkbox-style">
+        <input type="checkbox">
+        <label>
+            <i></i>
+        </label>
+    </div>
+</div>
+````
+
 
 ### Select(需要配合alimobscript/select使用)
 ````html

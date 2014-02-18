@@ -116,6 +116,99 @@
     display: none;
 }
 
+/*ali-checkbox-style*/
+.ali-checkbox-style{
+    width: 90px;
+    height: 25px;
+    position: relative;
+}
+.ali-checkbox-style input[type=checkbox]{
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 100;
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+.ali-checkbox-style label{
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: #a5a39d;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    border-radius: 20px;
+    -webkit-box-shadow: inset 0 3px 8px 1px rgba(0, 0, 0, 0.2), 0 1px 0 rgba(255, 255, 255, 0.5);
+    -moz-box-shadow: inset 0 3px 8px 1px rgba(0, 0, 0, 0.2), 0 1px 0 rgba(255, 255, 255, 0.5);
+    box-shadow: inset 0 3px 8px 1px rgba(0, 0, 0, 0.2), 0 1px 0 rgba(255, 255, 255, 0.5);
+}
+.ali-checkbox-style input:checked ~ label{
+    background: #9abb82;
+}
+.ali-checkbox-style label i{
+    display: block;
+    position: absolute;
+    height: 100%;
+    width: 60%;
+    -webkit-border-radius: inherit;
+    -moz-border-radius: inherit;
+    border-radius: inherit;
+    z-index: 2;
+    background: silver;
+    right: 40%;
+    top: 0;
+    background: #b2ac9e;
+    background: -webkit-gradient(linear, 0 0, 0 100%, from(#f7f2f6), to(#b2ac9e));
+    background: -webkit-linear-gradient(#f7f2f6, #b2ac9e);
+    background: linear-gradient(#f7f2f6, #b2ac9e);
+    box-shadow: inset 0 1px 0 white, 0 0 8px rgba(0,0,0,0.3), 0 5px 5px rgba(0,0,0,0.2);
+    -webkit-transition: right 0.01s ease;
+    -moz-transition: right 0.01s ease;
+    -ms-transition: right 0.01s ease;
+    -o-transition: right 0.01s ease;
+    transition: right 0.01s ease;
+}
+.ali-checkbox-style input:checked ~ label i{
+    right: -1%;
+}
+.ali-checkbox-style label i:before{
+    content: "off";
+    text-transform: uppercase;
+    font-style: normal;
+    font-weight: normal;
+    color: rgba(0,0,0,0.4);
+    text-shadow: 0 1px 0 #bcb8ae, 0 -1px 0 #97958e;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 12px;
+    position: absolute;
+    top: 50%;
+    margin-top: -8px;
+    right: -50%;
+}
+.ali-checkbox-style input:checked ~ label i:before{
+    content: "on";
+    right: 115%;
+    color: #82a06a;
+    text-shadow: 0 1px 0 #afcb9b, 0 -1px 0 #6b8659;
+}
+.ali-checkbox-style label i:after{
+    content: "";
+    position: absolute;
+    left: 15%;
+    top: 25%;
+    width: 70%;
+    height: 50%;
+    background: #d2cbc3;
+    background: -webkit-gradient(linear, 0 0, 0 100%, from(#cbc7bc), to(#d2cbc3));
+    background: -webkit-linear-gradient(#cbc7bc, #d2cbc3);
+    background: linear-gradient(#cbc7bc, #d2cbc3);
+    border-radius: inherit;
+}
+
 .ali-field-input {
     position: relative;
     overflow-x: hidden;
