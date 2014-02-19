@@ -6,8 +6,6 @@
 
 ---
 
-<link type="text/css" rel="stylesheet" media="screen" href="src/form.css">
-
 ## 演示
 
 ### Input
