@@ -6,7 +6,6 @@
 
 ---
 
-<link type="text/css" rel="stylesheet" media="screen" href="src/base.css">
 <link type="text/css" rel="stylesheet" media="screen" href="src/form.css">
 
 ## 演示

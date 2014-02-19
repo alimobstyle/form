@@ -17,7 +17,8 @@
   "spm": {
     "output":   ["form.css"],
     "alias":    {
-        "base": "alimobstyle/base/1.0.0/base.css"
+        "base": "alimobstyle/base/1.0.0/base.css",
+        "layout": "alimobstyle/layout/1.0.0/layout.css"
     },
     "devAlias": {},
     "engines":  {}
