@@ -8,8 +8,6 @@
 
 ## 演示
 
-<link rel="stylesheet" href="src/form.css" />
-
 ### Input
 ````html
 <div class="ali-field">
