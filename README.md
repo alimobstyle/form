@@ -313,7 +313,11 @@
             <h3>操作记录</h3>
         </div>
     </div>
-    <div class="ali-field-message">error message</div>
+    <div class="ali-field-message">
+        <div class="ali-field-message-arrow"></div>
+        <div class="ali-field-message-icon"></div>
+        <p>提示信息</p>
+    </div>
 </div>
 ````
 
@@ -323,7 +327,10 @@
     <div class="ali-textarea">
         <textarea name="" placeholder="请输入评论内容"></textarea>
     </div>
-    <div class="ali-field-message">error message</div>
+    <div class="ali-field-message">
+        <div class="ali-field-message-arrow"></div>
+        <p>提示信息</p>
+    </div>
 </div>
 ````
 
@@ -333,7 +340,11 @@
     <div class="ali-textarea">
         <textarea name="" placeholder="请输入评论内容"></textarea>
     </div>
-    <div class="ali-field-message">error message</div>
+    <div class="ali-field-message">
+        <div class="ali-field-message-arrow"></div>
+        <div class="ali-field-message-icon"></div>
+        <p>提示信息</p>
+    </div>
 </div>
 ````
 
