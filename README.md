@@ -8,13 +8,18 @@
 
 ## 演示
 
+<link rel="stylesheet" href="src/form.css" />
+
 ### Input
 ````html
 <div class="ali-field">
     <div class="ali-field-input">
         <input type="text" placeholder="电话" value="">
     </div>
-    <div class="ali-field-message">提示信息</div>
+    <div class="ali-field-message">
+        <div class="ali-field-message-arrow"></div>
+        <p>提示信息</p>
+    </div>
 </div>
 ````
 
@@ -33,6 +38,11 @@
     <div class="ali-field-input">
         <input type="text" placeholder="银行开户名">
     </div>
+    <div class="ali-field-message">
+        <div class="ali-field-message-arrow"></div>
+        <div class="ali-field-message-icon"></div>
+        <p>提示信息</p>
+    </div>
 </div>
 ````
 
@@ -42,7 +52,11 @@
     <div class="ali-field-input">
         <input type="text" placeholder="银行开户名">
     </div>
-    <div class="ali-field-message">warn message</div>
+    <div class="ali-field-message">
+        <div class="ali-field-message-arrow"></div>
+        <div class="ali-field-message-icon"></div>
+        <p>提示信息</p>
+    </div>
 </div>
 ````
 
@@ -52,8 +66,11 @@
     <div class="ali-field-input">
         <input type="text" placeholder="身份证号">
     </div>
-    <div class="ali-field-default-message">default message</div>
-    <div class="ali-field-message">error message</div>
+    <div class="ali-field-message">
+        <div class="ali-field-message-arrow"></div>
+        <div class="ali-field-message-icon"></div>
+        <p>提示信息</p>
+    </div>
 </div>
 ````
 
@@ -81,7 +98,10 @@
         </div>
       </div>
     </div>
-    <div class="ali-field-message">default message</div>
+    <div class="ali-field-message">
+        <div class="ali-field-message-arrow"></div>
+        <p>提示信息</p>
+    </div>
 </div>
 ````
 
@@ -100,7 +120,11 @@
         </div>
       </div>
     </div>
-    <div class="ali-field-message">default message</div>
+    <div class="ali-field-message">
+        <div class="ali-field-message-arrow"></div>
+        <div class="ali-field-message-icon"></div>
+        <p>提示信息</p>
+    </div>
 </div>
 <div class="ali-field ali-field-pack ali-field-error">
     <div class="ali-flexbox">
@@ -115,7 +139,11 @@
         </div>
       </div>
     </div>
-    <div class="ali-field-message">default message</div>
+    <div class="ali-field-message">
+        <div class="ali-field-message-arrow"></div>
+        <div class="ali-field-message-icon"></div>
+        <p>提示信息</p>
+    </div>
 </div>
 ````
 
@@ -156,7 +184,11 @@
         <input type="checkbox">表单项复选框——出错
         <span class="ali-icon icon-check"></span>
     </label>
-    <div class="ali-field-message">warn message</div>
+    <div class="ali-field-message">
+        <div class="ali-field-message-arrow"></div>
+        <div class="ali-field-message-icon"></div>
+        <p>提示信息</p>
+    </div>
 </div>
 ````
 
@@ -167,7 +199,11 @@
         <input type="checkbox">表单项复选框——出错
         <span class="ali-icon icon-check"></span>
     </label>
-    <div class="ali-field-message">warn message</div>
+    <div class="ali-field-message">
+        <div class="ali-field-message-arrow"></div>
+        <div class="ali-field-message-icon"></div>
+        <p>提示信息</p>
+    </div>
 </div>
 ````
 

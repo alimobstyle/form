@@ -17,7 +17,7 @@
   "spm": {
     "output":   ["form.css"],
     "alias":    {
-        "base": "alimobstyle/one/1.0.1/one.css"
+        "one": "alimobstyle/one/1.0.1/one.css"
     },
     "devAlias": {},
     "engines":  {}
